@@ -283,7 +283,7 @@ for message in st.session_state.messages:
             try:
                 exec(message['content'])
             except Exception as e:
-                st.write(e)
+               pass
 
 # React to user input
 if prompt := st.chat_input('Your message here...'):
@@ -329,7 +329,7 @@ if prompt := st.chat_input('Your message here...'):
                 avatar=AI_AVATAR_ICON,
             )
         )
-        st.write(response)
+        # st.write(response)
         try:
             exec(response)
         except Exception as e:
